@@ -10,18 +10,14 @@ int fibonacci(int n,vector<int>& mem)
     mem[n] = fibonacci(n-1,mem) + fibonacci(n-2,mem);
     return mem[n];
 }
-
-
-
 int main()
 {
-    
     cout<<"enter a number";
     int n;
     cin>>n;
     vector<int> mem(n+1,0); 
     fibonacci(n,mem);
-    for(int i = 0; i <= n; i++)
+    for(int i = 0; i < n; i++)
         cout << mem[i] << " ";
     return 0;
 }
