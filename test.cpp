@@ -38,10 +38,27 @@ vector<string> letterCombinations(string s)
 
 int main()
 {
-    vector<string> result = letterCombinations("345");
-    for (const string& str : result)
+    // vector<string> result = letterCombinations("345");
+    // for (const string& str : result)
+    // {
+    //     cout << str << " ";
+    // }   
+    vector<int> nums = {3,1,5,6,89,5,82,65};
+    int n = nums.size();
+
+    // Step 1: In-place rearrangement, move each number to its correct position if possible.
+    for (int i = 0; i < n; i++) {
+        // Check if nums[i] is in the valid range [1, n] and not in its correct position
+        while (nums[i] > 0 && nums[i] <= n && nums[nums[i] - 1] != nums[i]) {
+            // Swap nums[i] with the number at its "correct" position nums[nums[i] - 1]
+            // int correctPosition = nums[i] + 1;
+            swap(nums[i], nums[nums[i] - 1]);
+        }
+    }
+    for (auto &&i : nums)
     {
-        cout << str << " ";
-    }    
+        cout<<i<<" ";
+    }
+    
     return 0;
 }
