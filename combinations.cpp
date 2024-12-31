@@ -37,7 +37,6 @@ void backtrack(vector<vector<int>>& ans,vector<int>& comb,int n,int k,int index)
     }
 }
 
-
 int main()
 {
     int n = 4,k = 2;
