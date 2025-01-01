@@ -14,6 +14,7 @@ int main()
 	shijin s,h,i;
 	shijin d;
 	d.pr();
+	
     h.pr();
     return 0;
 }
